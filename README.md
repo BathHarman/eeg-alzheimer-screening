@@ -12,12 +12,15 @@ I used the OpenNeuro ds004504 dataset (88 subjects: 36 AD, 29 HC, 23 FTD, ages 4
 ---
 
 ## What it does
+
 Loads all subjects from the BIDS-formatted dataset, preprocesses the raw EEG (bandpass filter, average reference), computes power spectral density via Welch's method, extracts mean power across five frequency bands, and runs a t-test comparing AD vs HC on the theta/alpha ratio. Outputs CSVs and figures.
 
 ## Key finding
+
 The AD group showed elevated delta and theta power with reduced alpha and beta power compared to healthy controls. The theta/alpha ratio was significantly higher in AD (p < 0.05), consistent with prior literature linking this ratio to cognitive decline and MMSE scores. The result held across all 88 subjects.
 
 ## Frequency bands
+
 | Band | Range |
 |------|-------|
 | Delta | 1–4 Hz |
@@ -50,15 +53,18 @@ Results and figures will be saved to `results/`.
 
 ## Output files
 
-| File |                            | Description |
-| `results/band_powers.csv`         | Per-subject band power for all five bands |
-| `results/statistics.csv`          | T-test results and Cohen's d (AD vs HC) |
-| `results/theta_alpha_ratio.png`   | Mean theta/alpha ratio by group with significance annotation |
+| File | Description |
+|------|-------------|
+| `results/band_powers.csv` | Per-subject band power for all five bands |
+| `results/statistics.csv` | T-test results and Cohen's d (AD vs HC) |
+| `results/theta_alpha_ratio.png` | Mean theta/alpha ratio by group with significance annotation |
 | `results/theta_alpha_boxplot.png` | Distribution of ratios by group |
-| `results/band_power_heatmap.png`  | Normalized band power across all groups |
+| `results/band_power_heatmap.png` | Normalized band power across all groups |
 
 ## Stack
+
 Python · MNE-Python · NumPy · SciPy · Pandas · Matplotlib
 
 ## Dataset
+
 Bruña R, et al. (2023). OpenNeuro ds004504. https://openneuro.org/datasets/ds004504
