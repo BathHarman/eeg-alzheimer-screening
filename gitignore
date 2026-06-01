@@ -1,0 +1,6 @@
+ds004504/
+results/
+__pycache__/
+*.pyc
+.env
+.DS_Store
